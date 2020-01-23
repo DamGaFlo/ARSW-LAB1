@@ -15,10 +15,10 @@ public class Main {
 
     public static void main(String a[]) {
 
-        System.out.println(bytesToHex(PiDigits.getDigits(0, 100000,50)));
-        System.out.println(bytesToHex(PiDigits.getDigits(0, 100000)));
-        System.out.println(bytesToHex(PiDigits.getDigits(1, 10)));
-        System.out.println(bytesToHex(PiDigits.getDigits(2, 10)));
+        long startTime = System.currentTimeMillis();
+        System.out.println(bytesToHex(PiDigits.getDigits(1, 200000,100)));
+        long endTime = System.currentTimeMillis();
+        System.out.println((startTime-endTime)/1000);
     }
 
     private final static char[] hexArray = "0123456789ABCDEF".toCharArray();

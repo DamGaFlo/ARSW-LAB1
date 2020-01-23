@@ -13,19 +13,27 @@ public class PiDigits{
     private static int DigitsPerSum = 8;
     private static double Epsilon = 1e-17;
 
-
+    /**
+     *
+     * @param start el digito de pi en el cual se quiere iniciar
+     * @param count el numero de digitos que se desea tomar
+     * @param n el numero de intervalos en el que se desea ejecutar
+     * @return un arreglo de bytes cuada uno de estos bytes es un digito
+     */
     public static byte[] getDigits(int start, int count, int n){
         byte[] digits = new byte[count];
         int intervalo = count/n;
         int newIndice = start;
         PiDigitsFactory[] threads = new PiDigitsFactory[n];
         int i = 0;
-        while(newIndice+intervalo<=count){
-            threads[i] = new PiDigitsFactory(newIndice,intervalo,digits);
+        for(;i<n-1;i++){
+            threads[i] = new PiDigitsFactory(start,newIndice,intervalo,digits);
             threads[i].start();
-            i++;
             newIndice+=intervalo;
         }
+        threads[i] = new PiDigitsFactory(start,newIndice,(count-newIndice+start),digits);
+        threads[i].start();
+
 
         try{
             for(PiDigitsFactory hilo:threads) hilo.join();
