@@ -16,7 +16,7 @@ public class Main {
     public static void main(String a[]) {
 
         long startTime = System.currentTimeMillis();
-        System.out.println(bytesToHex(PiDigits.getDigits(1, 200000,100)));
+        System.out.println(bytesToHex(PiDigits.getDigits(1, 50000,8)));
         long endTime = System.currentTimeMillis();
         System.out.println((startTime-endTime)/1000);
     }
