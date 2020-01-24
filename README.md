@@ -19,7 +19,7 @@ Para la ejecucion basta con el comando `mvn exec:java -Dexec.mainClass="edu.eci.
 
 	#### parte III
 
-	According to [Amdahls law](https://www.pugetsystems.com/labs/articles/Estimating-CPU-Performance-using-Amdahls-Law-	619/#WhatisAmdahlsLaw?), where S (n) is the theoretical performance improvement, P the parallel fraction of the algorithm, and n the number of threads, the greater n, the greater the improvement should be. 
+	According to  Amdahls law, where S (n) is the theoretical performance improvement, P the parallel fraction of the algorithm, and n the number of threads, the greater n, the greater the improvement should be. 
 
 	Why is the best performance not achieved with the 500 threads? 
 Esto pasa por la falta de recursos físicos pues la teoría supone que se cuentan con estos y funcionan de al mejor manera. En este caso no es asi y se piden mas recursos de los que la maquina puede dar y esta falla en la busqueda de cumplir la petición.
