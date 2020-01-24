@@ -9,7 +9,7 @@ El objetivo de este laboratorio es trabajar y entender los Threads(subprocesos) 
 primero debemos tener una copia local del repositorio puede usar el comando `git clone`. 
 
 para compilarlo, el repositorio local, desde consola, nos ubicamos en la raiz del proyecto y usamos el comando `mvn package`.
-Para la ejecucion basta con el comando `hola` desde consola. para algún resultado en especifico debera alterar la fuente.
+Para la ejecucion basta con el comando `mvn exec:java -Dexec.mainClass="edu.eci.arsw.math.Main` desde consola. para algún resultado en especifico debera alterar la fuente.
 
 - ## solucion a preguntas
 	#### parte I
