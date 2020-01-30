@@ -5,10 +5,10 @@
 - ### Introduccion
 El objetivo de este laboratorio es trabajar y entender los Threads(subprocesos) con dos ejercicios que son: crear 3 hilos y que cada uno imprima un segmento distinto de números y buscar digitos de pi en hexagecimal. Este proyecto esta con fines académicos y con un gran aspecto técnico.
 
-- ### Compilación y ejecución
-primero debemos tener una copia local del repositorio puede usar el comando `git clone`. 
+- ### Compilación y ejecución 
+primero debemos tener una copia local del repositorio puede usar el comando `git clone`.
 
-para compilarlo, el repositorio local, desde consola, nos ubicamos en la raiz del proyecto y usamos el comando `mvn package`.
+para compilarlo, el repositorio local, desde consola, nos ubicamos en la raiz del proyecto y usamos el comando `mvn compile`.
 Para la ejecucion basta con el comando `mvn exec:java -Dexec.mainClass="edu.eci.arsw.math.Main` desde consola. para algún resultado en especifico debera alterar la fuente.
 
 - ## solucion a preguntas
@@ -37,3 +37,20 @@ viendo las especificaciones de la maquina y contrario a los esperado se obtuvo m
 	If, instead, c threads were used in 500 / c distributed machines (where c is the number of cores of said machines), would it be improved? Explain your answer.
 
 	si, e incluso se aprovecharían mejor los recursos disponibles. eso notamos cuando usamos cuando usamos tanto subprocesos como núcleos.
+	
+	
+	## Parte 2
+	
+	- ### Compilacion y ejecucion (Parte 2 I PrimeNumbers Digits)
+	
+	debe tener su copia local del proyecto le recordamos que puede usar `git clone`
+
+	Para compilar el proyecto ponga el siguiente comando: `mvn compile`
+Para probar el programa usted mismo ponga el siguiente comando: `mvn exec:java -Dexec.mainClass="edu.eci.arsw.primefinder.Main"`
+debe revisar que si este ubicado en el directorio donde estan los archivos.
+
+	- ### Compilacion y ejecucion (Parte 2 II Canodromo)?
+
+	Para compilar el proyecto ponga el siguiente comando: `mvn compile`
+Para probar el programa usted mismo y poner casos ponga el siguiente comando: `mvn exec:java -Dexec.mainClass="arsw.threads.MainCanodromo"`
+debe revisar que si este ubicado en el directorio donde estan los archivos.
